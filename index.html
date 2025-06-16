@@ -16,7 +16,8 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top left, #1e1e1e, #121212);
+      background: url('/images/subtle-texture.png') repeat, radial-gradient(circle at top left, #1e1e1e, #121212);
+      background-blend-mode: overlay;
       color: #fff;
     }
     header {
@@ -102,6 +103,16 @@
     form button {
       width: auto;
     }
+    .chatbox {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #1e1e1e;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      max-width: 300px;
+    }
     @media (max-width: 768px) {
       .pricing-card {
         width: 100%;
@@ -170,9 +181,16 @@
     <a href="#"><img src="/images/icon-twitter.png" alt="Twitter"></a>
   </div>
 </section>
+<div class="chatbox">
+  <form action="mailto:placeholder@email.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Chat name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="2" placeholder="Your message..." required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</div>
 <footer>
   <p>&copy; 2025 Repurposa. All rights reserved.</p>
 </footer>
 </body>
 </html>
-
