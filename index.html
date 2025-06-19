@@ -26,13 +26,14 @@
         .hero {
   position: relative;
   width: 100%;
-  min-height: 60vh;            /* adjust height as needed */
-  background-image: url('/path/to/neon-tunnel.png'); /* point to your image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
+          /* new full-page fixed background */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('/images/neon-tunnel.png') no-repeat center center fixed;
+            background-size: cover;
+        }
+
   justify-content: center;
   color: white;
   overflow: hidden;
